@@ -1,0 +1,46 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T02:41:08.564Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-17",
+        "summary": "Rename the app from 'Devel' to 'Devil India' consistently across all user-facing text, page titles, meta tags, and branding elements. Update the HTML <title> in index.html, the landing page hero text and footer, the navigation bar logo/wordmark, the profile setup modal, and any other location that currently displays 'Devel'.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/pages/ProfileSetupModal.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/pages/LandingPage.tsx",
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/pages/ProfileSetupModal.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/src/pages/ProfileSetupModal.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

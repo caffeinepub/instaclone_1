@@ -1,0 +1,27 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-rename-the-app-from-devel-to-devil-india-consistently-across-all-user-facing-text-page-titles-meta-tags-and-branding-elements-update-the-html-title-in-index-html-the-landing-page-hero-text-and-footer-the-navigation-bar-logo-wordmark-the-profile-setup-modal-and-any-other-location-that-currently-displays-devel",
+      "featureTitle": "Rename the app from 'Devel' to 'Devil India' consistently across all user-facing text, page titles, meta tags, and branding elements. Update the HTML <title> in index.html, the landing page hero text and footer, the navigation bar logo/wordmark, the profile setup modal, and any other location that currently displays 'Devel'.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/pages/LandingPage.tsx",
+        "frontend/src/pages/ProfileSetupModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

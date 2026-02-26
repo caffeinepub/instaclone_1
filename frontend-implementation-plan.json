@@ -1,0 +1,41 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Rename app from 'Devel' to 'Devil India'",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "summary": "Rename the app from 'Devel' to 'Devil India' consistently across all user-facing text, page titles, meta tags, and branding elements",
+      "acceptanceCriteria": [
+        "The HTML <title> in index.html reads 'Devil India'",
+        "The navigation bar logo/wordmark displays 'Devil India'",
+        "The landing page hero section displays 'Devil India' as the app name",
+        "The ProfileSetupModal references 'Devil India' instead of 'Devel'",
+        "No instance of 'Devel', 'Insta Clone', or 'Instagram Clone' remains in any user-facing text",
+        "The footer (if present) shows 'Devil India'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the <title> tag from 'Devel' to 'Devil India' to change the browser tab title and meta tags"
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Replace all instances of 'Devel' with 'Devil India' in the hero section heading, subheading, feature descriptions, and footer text to update the landing page branding"
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Update the navigation bar logo/wordmark from 'Devel' to 'Devil India' to reflect the new app name in the top navigation"
+        },
+        {
+          "path": "frontend/src/pages/ProfileSetupModal.tsx",
+          "operation": "modify",
+          "description": "Replace any references to 'Devel' with 'Devil India' in the modal title, description, or placeholder text to ensure consistency during first-time user onboarding"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "A photo-sharing app called 'Devil India' similar to Instagram with image posting, likes/comments, follow/unfollow, user profiles, feed, and authentication. The app should have its own distinct identity (not look like Instagram), use a blue color scheme, and include Stories, Explore/Search, Notifications, and Save/Bookmark features.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-authentication-so-users-can-sign-in-and-out-securely-gate-all-social-features-posting-liking-commenting-following-behind-authentication",
+      "title": "Implement Internet Identity authentication so users can sign in and out securely. Gate all social features (posting, liking, commenting, following) behind authentication.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-user-profiles-stored-in-the-backend-each-profile-has-a-principal-based-id-a-display-name-a-bio-and-an-avatar-url-users-can-edit-their-own-profile",
+      "title": "Implement user profiles stored in the backend. Each profile has a principal-based ID, a display name, a bio, and an avatar URL. Users can edit their own profile.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-image-post-creation-authenticated-users-can-create-a-post-by-providing-an-image-url-and-a-caption-posts-are-stored-in-the-backend-with-a-timestamp-and-the-author-s-principal",
+      "title": "Implement image post creation. Authenticated users can create a post by providing an image URL and a caption. Posts are stored in the backend with a timestamp and the author's principal.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-home-feed-that-displays-posts-from-users-the-current-authenticated-user-follows-sorted-by-most-recent-if-the-user-follows-nobody-show-a-discovery-feed-with-all-recent-posts",
+      "title": "Implement a home feed that displays posts from users the current authenticated user follows, sorted by most recent. If the user follows nobody, show a discovery feed with all recent posts.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-like-system-authenticated-users-can-like-or-unlike-any-post-the-like-count-is-stored-in-the-backend-per-post",
+      "title": "Implement a like system. Authenticated users can like or unlike any post. The like count is stored in the backend per post.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-comment-system-authenticated-users-can-add-text-comments-to-any-post-comments-are-stored-in-the-backend-with-author-principal-and-timestamp",
+      "title": "Implement a comment system. Authenticated users can add text comments to any post. Comments are stored in the backend with author principal and timestamp.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-follow-unfollow-authenticated-users-can-follow-or-unfollow-other-users-the-follower-and-following-counts-are-stored-in-the-backend",
+      "title": "Implement follow/unfollow. Authenticated users can follow or unfollow other users. The follower and following counts are stored in the backend.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-modern-visual-theme-use-a-dark-charcoal-background-111111-1a1a1a-with-warm-amber-gold-accent-colors-f5a623-clean-sans-serif-typography-card-based-layouts-with-subtle-shadows-and-smooth-hover-transitions-enforce-this-theme-consistently-across-all-pages-and-components",
+      "title": "Apply a bold, modern visual theme. Use a dark charcoal background (#111111 / #1a1a1a) with warm amber/gold accent colors (#F5A623), clean sans-serif typography, card-based layouts with subtle shadows, and smooth hover transitions. Enforce this theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-static-assets-app-logo-and-placeholder-avatar-from-frontend-public-assets-generated-in-the-ui-the-logo-in-the-top-navigation-bar-and-the-placeholder-avatar-for-users-who-have-not-set-a-custom-avatar-url",
+      "title": "Render the generated static assets (app logo and placeholder avatar) from frontend/public/assets/generated in the UI: the logo in the top navigation bar and the placeholder avatar for users who have not set a custom avatar URL.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-visual-theme-across-the-entire-app-to-use-a-deep-navy-blue-color-scheme-e-g-primary-background-0d1117-0f1923-accent-color-2563eb-or-a-vivid-electric-blue-3b82f6-replacing-the-current-amber-gold-accents-update-tailwind-config-css-custom-properties-and-all-component-styling-to-consistently-apply-the-new-blue-palette-while-keeping-the-dark-charcoal-base-and-card-based-layout",
+      "title": "Update the visual theme across the entire app to use a deep navy/blue color scheme (e.g., primary background #0d1117 / #0f1923, accent color #2563EB or a vivid electric blue #3B82F6) replacing the current amber/gold accents. Update Tailwind config, CSS custom properties, and all component styling to consistently apply the new blue palette while keeping the dark charcoal base and card-based layout.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-stories-feature-authenticated-users-can-create-a-story-by-providing-an-image-url-stories-are-stored-in-the-backend-with-a-24-hour-ttl-timestamp-based-expiry-checked-on-read-the-home-page-displays-a-horizontal-scrollable-stories-bar-at-the-top-showing-avatars-of-users-who-have-active-stories-clicking-a-story-avatar-opens-a-full-screen-story-viewer-overlay-stories-expire-after-24-hours-and-are-not-returned-by-the-backend-after-expiry",
+      "title": "Implement a Stories feature. Authenticated users can create a Story by providing an image URL; stories are stored in the backend with a 24-hour TTL (timestamp-based expiry checked on read). The home page displays a horizontal scrollable Stories bar at the top showing avatars of users who have active stories. Clicking a story avatar opens a full-screen story viewer overlay. Stories expire after 24 hours and are not returned by the backend after expiry.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-explore-search-page-add-a-new-route-explore-the-page-shows-a-search-input-at-the-top-users-can-search-for-other-users-by-display-name-below-the-search-display-a-grid-of-all-recent-posts-discovery-feed-backend-should-expose-a-searchusers-query-that-returns-profiles-matching-a-display-name-substring",
+      "title": "Implement an Explore/Search page. Add a new route '/explore'. The page shows a search input at the top; users can search for other users by display name. Below the search, display a grid of all recent posts (discovery feed). Backend should expose a searchUsers query that returns profiles matching a display name substring.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-notifications-system-the-backend-should-record-notification-events-for-a-user-s-post-being-liked-a-user-s-post-receiving-a-new-comment-and-a-user-being-followed-each-notification-stores-the-actor-s-principal-the-event-type-the-target-post-id-if-applicable-and-a-timestamp-expose-a-getnotifications-query-returning-the-caller-s-notifications-sorted-by-most-recent-and-a-marknotificationsread-update-call-add-a-notifications-page-at-notifications-and-a-bell-icon-in-the-navigation-bar-with-an-unread-badge-count",
+      "title": "Implement a Notifications system. The backend should record notification events for: a user's post being liked, a user's post receiving a new comment, and a user being followed. Each notification stores the actor's principal, the event type, the target post ID (if applicable), and a timestamp. Expose a getNotifications query returning the caller's notifications sorted by most recent, and a markNotificationsRead update call. Add a Notifications page at '/notifications' and a bell icon in the navigation bar with an unread badge count.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-save-bookmark-feature-authenticated-users-can-bookmark-or-unbookmark-any-post-the-backend-stores-a-per-user-set-of-saved-post-ids-and-exposes-savepost-unsavepost-and-getsavedposts-calls-add-a-bookmark-icon-button-on-each-postcard-add-a-saved-page-that-displays-the-authenticated-user-s-saved-posts-in-a-grid",
+      "title": "Implement a Save/Bookmark feature. Authenticated users can bookmark or unbookmark any post. The backend stores a per-user set of saved post IDs and exposes savePost, unsavePost, and getSavedPosts calls. Add a bookmark icon button on each PostCard. Add a '/saved' page that displays the authenticated user's saved posts in a grid.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navigation-bar-to-include-links-to-the-new-explore-explore-notifications-notifications-and-saved-saved-pages-the-bell-icon-should-show-an-unread-notification-badge-all-new-nav-items-should-follow-the-existing-navigation-styling-with-the-updated-blue-theme",
+      "title": "Update the navigation bar to include links to the new Explore ('/explore'), Notifications ('/notifications'), and Saved ('/saved') pages. The bell icon should show an unread notification badge. All new nav items should follow the existing navigation styling with the updated blue theme.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-app-name-devel-is-used-consistently-across-all-user-facing-text-page-titles-meta-tags-and-branding-elements-remove-any-references-to-insta-clone-instagram-clone-or-similar-placeholder-names-update-the-html-title-in-index-html-the-landing-page-hero-text-the-navigation-bar-logo-wordmark-the-profile-setup-modal-and-any-other-location-that-displays-the-app-name",
+      "title": "Ensure the app name 'Devel' is used consistently across all user-facing text, page titles, meta tags, and branding elements. Remove any references to 'Insta Clone', 'Instagram Clone', or similar placeholder names. Update the HTML <title> in index.html, the landing page hero text, the navigation bar logo/wordmark, the profile setup modal, and any other location that displays the app name.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-rename-the-app-from-devel-to-devil-india-consistently-across-all-user-facing-text-page-titles-meta-tags-and-branding-elements-update-the-html-title-in-index-html-the-landing-page-hero-text-and-footer-the-navigation-bar-logo-wordmark-the-profile-setup-modal-and-any-other-location-that-currently-displays-devel",
+      "title": "Rename the app from 'Devel' to 'Devil India' consistently across all user-facing text, page titles, meta tags, and branding elements. Update the HTML <title> in index.html, the landing page hero text and footer, the navigation bar logo/wordmark, the profile setup modal, and any other location that currently displays 'Devel'.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Post images with captions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Like and comment on posts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Follow/unfollow other users",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "User profiles with post grids",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Feed showing posts from followed users",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Authentication via Internet Identity",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Stories - 24-hour disappearing posts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Explore/Search page - discover users and posts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Notifications - likes, comments, follows",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Save/Bookmark posts - personal saved collection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Change color scheme to blue (distinct from Instagram look)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Devel",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

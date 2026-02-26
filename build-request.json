@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Rename app from 'Devel' to 'Devil India'",
+  "projectName": "Devil India",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "text": "Rename the app from 'Devel' to 'Devil India' consistently across all user-facing text, page titles, meta tags, and branding elements. Update the HTML <title> in index.html, the landing page hero text and footer, the navigation bar logo/wordmark, the profile setup modal, and any other location that currently displays 'Devel'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-12",
+          "msg-14"
+        ],
+        "quotes": [
+          "Devil india🇮🇳🥺",
+          "2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The HTML <title> in index.html reads 'Devil India'",
+        "The navigation bar logo/wordmark displays 'Devil India'",
+        "The landing page hero section displays 'Devil India' as the app name",
+        "The ProfileSetupModal references 'Devil India' instead of 'Devel'",
+        "No instance of 'Devel', 'Insta Clone', or 'Instagram Clone' remains in any user-facing text",
+        "The footer (if present) shows 'Devil India'"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change any backend logic or data models",
+    "Do not alter immutable frontend paths (hooks, main.tsx, ui components)"
+  ],
+  "nonGoals": [
+    "Adding the Indian flag emoji 🇮🇳 to the app name (user selected option 2: 'Devil India' without flag)",
+    "Changing the visual theme or color scheme",
+    "Adding or removing any features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
